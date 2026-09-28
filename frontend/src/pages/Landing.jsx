@@ -18,14 +18,14 @@ export default function Landing() {
   return (
     <div className="landing">
       <header className="landing-hero">
-        <h1>AI-Based Attendance System Using Face Recognition</h1>
+        <h1>Attendance System</h1>
         <p className="landing-subtitle">
           A Final Year Project that replaces manual roll-call with a face-recognition
           attendance pipeline, built to be measured, not just demonstrated.
         </p>
         <div className="landing-actions">
           <Link to="/admin/login" className="btn btn-primary">Admin Login</Link>
-          <Link to="/kiosk" className="btn btn-secondary">Open Kiosk</Link>
+          <Link to="/kiosk" className="btn btn-secondary">Take Attendance</Link>
         </div>
       </header>
 

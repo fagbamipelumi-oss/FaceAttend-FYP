@@ -152,7 +152,7 @@ export default function Kiosk() {
 
   return (
     <div className="kiosk">
-      <h1>Attendance Kiosk</h1>
+      <h1>Attendance Check-In</h1>
 
       <label className="kiosk-session">
         Session ID:{" "}
