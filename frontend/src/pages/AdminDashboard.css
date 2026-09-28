@@ -1,0 +1,103 @@
+.dashboard {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dashboard-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  padding: 0.6rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  color: #1d4ed8;
+  border-bottom-color: #1d4ed8;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table tbody tr:hover {
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.selected-row {
+  background: #eff6ff;
+}
+
+.inline-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.inline-form input {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.consent-check {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  max-width: 320px;
+}
+
+.photo-upload-box {
+  border: 1px dashed #d1d5db;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.photo-results {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.photo-results .accepted {
+  color: #15803d;
+}
+
+.photo-results .rejected {
+  color: #b91c1c;
+}
+
+.form-error {
+  color: #b91c1c;
+}

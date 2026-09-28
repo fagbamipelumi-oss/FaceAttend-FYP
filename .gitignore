@@ -1,0 +1,54 @@
+# Biometric / personal data — never commit real enrollment data
+data/raw_enrollment/*
+data/embeddings/*
+data/test_sets/*
+!data/raw_enrollment/.gitkeep
+!data/embeddings/.gitkeep
+!data/test_sets/.gitkeep
+
+# Secrets
+.env
+backend/.env
+frontend/.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.pyc
+backend/venv/
+backend/.venv/
+*.egg-info/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Report build output (regenerated from Markdown sources)
+report/build/*.docx
+report/build/figures/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local machine TLS workaround artifacts (not part of the project)
+backend/cacert.pem
+backend/avast-root.pem
+backend/combined-ca-bundle.pem
+backend/build-dlib.bat
+backend/*.log
+backend/*.db
+backend/server.pid
+backend/app/tests/test.db
+
+# Downloaded ML model files (large binaries, fetched by scripts/download not committed)
+backend/models/*.dat
+
+# Evaluation datasets and generated reports (contain real biometric photos once real
+# enrollment data is used; results are regenerated from the dataset each run)
+evaluation/dataset/
+evaluation/dataset_smoketest/
+evaluation/results/
+

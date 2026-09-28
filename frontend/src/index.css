@@ -1,0 +1,116 @@
+:root {
+  color-scheme: light dark;
+  font: 16px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  background: #1d4ed8;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1.25rem;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.auth-form input {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.form-error {
+  color: #b91c1c;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111;
+}
+
+/* Printable attendance sheet: hidden during normal browsing, and the only
+   thing visible on the page when actually printing. */
+.print-area {
+  display: none;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+  .print-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  .print-table th,
+  .print-table td {
+    border: 1px solid #333;
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+  }
+  .print-footer {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #333;
+  }
+}
